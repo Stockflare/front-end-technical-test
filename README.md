@@ -2,32 +2,29 @@
 
 Stockflare's page for a stock is one of the key elements of our site, Apple's stock page can be found here https://stockflare.com/stocks/AAPL.O
 
-We have a number of api endpoints that provide the stock information, we would like you to write a stock web page of your own design to display some of the information available from our apis.
+We have a number of API endpoints that provide instrument and historical information, we would like you to write a stock page of your own design to display some of the information available from our apis.
 
 You can:
-*  Choose any platform, language, framework as long as the entire project can be delivered in a single github repo.
-*  Choose to display whatever information you want about the stock as long as you display the `short_name`, `ric` `rating` and `price`.
+*  Choose any platform, language, framework as long as the entire project can be delivered in a single Github repo.
+*  Choose to display whatever information you want about the stock as long as you display its name, ticker and price.
 
 Make sure that:
-* The page can display any stock using either `ric` or `sic` as the key in the url so your urls need to be along the lines of http://mysite.com/stocks/:sic or http://mysite.com/stocks?sic=xxx, choose one of the key fields, you don't need to support both.
-* Anything displayed that is available from one of our apis must be retrieved by the page from the api, not hard coded.
-* We can run the project, the build and running instructions must be part of the README.md of the project.  We will run your code on a clean LINUX VM so you can feel free to use any tech that can be easily installed on linux.
-* Submit the test as a github repo, either public or private, if private then please add https://github.com/stratmm and https://github.com/davidkelley as collaborators.
+* The page can display any stock using either a `ticker`, `ric` or `sic` as the key in the URL. There is no requirement to support all three.
+* All datapoints displayed for a particular stock must be loaded dynamically. There should not be any hard coded stock data.
+* We can easily run the project. The build and running instructions must be documented in the `README.md` file.
+* Submit the test as a public or private Github repository. 
+ 
+_Note: If private, then please add [stratmm](https://github.com/stratmm) and [davidkelley](https://github.com/davidkelley) as collaborators._
 
-Things of note:
-* Don't feel the need to spend a huge amount of time on this test.
-* We want to find out what your coding / work style is like and how you choose to organize a project.
-* We don't want you to feel you have to produce a huge volume of code, if you have code from previous projects that will save you time then feel free to use it.
-* Don't feel the need to add in every conceivable CSS flourish, the page just needs to look clean and nice.
-
+__Things of note__
+* Time limits are pretty ridiculous. Spend as much time completing this test as you have value for the position your applying to.
+* Our goal is to determine your coding & work style as well as how you choose to organize a project.
 
 ## APIs
 
-There are three apis available for you to use.  We front the APIs though the Amazon AWS-API-Gateway product, because we use a lot of array and object based parameters and AWS-API-Gateway does not support this in `GET` calls we generally publicly expose the endpoints as `PUT` calls so that the parameters can be sent in the request body.
+There are three APIs available for use.
 
-The `Search` API is a convenient method of retrieving all stock data and shows the latest data for any stock.  The `Instrument` API proved basic details of a stock while the `Historical` API provides time series data on stocks for values that change every day and is useful for return graphs.
-
-Use any or all of these API as you choose, they are there simply for your convenience and don't feel obliged to use them all.
+The Search API is a convenient method of retrieving stock data and shows the latest data for any stock. The Instrument API provides basic details of a stock, whilst the Historical API provides time series financial data on stocks.
 
 ### Search API
 
