@@ -1,8 +1,8 @@
-# Front End Technical Test
+# Stockflare Technical Test
 
-Stockflare's page for a stock is one of the key elements of our site, Apple's stock page can be found here https://stockflare.com/stocks/AAPL.O
+A stock is one of the key elements of our information site, Apple's stock page can be found here https://stockflare.com/stocks/AAPL.O
 
-We have a number of API endpoints that provide instrument and historical information, we would like you to write a stock page of your own design to display some of the information available from our apis.
+We have a number of API endpoints that provide instrument and historical information, we would like you to write a stock page of your own design to display some of the information available from our APIs.
 
 You can:
 *  Choose any platform, language, framework as long as the entire project can be delivered in a single Github repo.
@@ -14,7 +14,7 @@ Make sure that:
 * We can easily run the project. The build and running instructions must be documented in the `README.md` file.
 * Submit the test as a public or private Github repository. 
  
-_Note: If private, then please add [stratmm](https://github.com/stratmm) and [davidkelley](https://github.com/davidkelley) as collaborators._
+_Note: If private, then please add several of our team as collaborators._
 
 __Things of note__
 * Time limits are pretty ridiculous. Spend as much time completing this test as you have value for the position your applying to.
