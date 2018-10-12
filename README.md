@@ -28,13 +28,13 @@ The Search API is a convenient method of retrieving stock data and shows the lat
 
 ### Search API
 
-https://dozlacmd51.execute-api.us-east-1.amazonaws.com/v1/search
+https://api.stockflare.com/search
 
 The Search API aims to abstract and simplify specific calls to the Elasticsearch backend. The API provides a number of endpoints facilitating the requests that are required by the Stockflare software stack. Such endpoints simplify searching for a company by name, for example.
 
 #### Getting a list of stocks by text search term
 
-PUT https://dozlacmd51.execute-api.us-east-1.amazonaws.com/v1/search with body
+PUT https://api.stockflare.com/search with body
 ```
 {
   "term": "apple",
@@ -46,7 +46,7 @@ This will give you a list of stocks with `apple` in their name.
 
 #### Getting a single stock by id
 
-PUT https://dozlacmd51.execute-api.us-east-1.amazonaws.com/v1/search/filter with body
+PUT https://api.stockflare.com/v1/search/filter with body
 ```
 {
   "conditions": {
@@ -127,7 +127,7 @@ Instruments can be requested using an `isin` code, a `ric` or `repo_no` paramete
 
 #### Get the details of an instrument by SIC
 
-PUT https://dozlacmd51.execute-api.us-east-1.amazonaws.com/v1/instruments with body
+PUT https://api.stockflare.com/instruments with body
 ```
 {
     "sic": "6c8227be-6855-11e4-98bf-294717b2347c"
@@ -157,7 +157,7 @@ Returns time-series based historical information for all Instruments tracked by 
 Historical data can only be requested using a `sic` (Stockflare Instrument Code) parameter.
 
 #### Get the history of a price for a stock
-PUT https://dozlacmd51.execute-api.us-east-1.amazonaws.com/v1/historical with body
+PUT https://api.stockflare.com/historical with body
 ```
 {
     "sic": "6c8227be-6855-11e4-98bf-294717b2347c",
